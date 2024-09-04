@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    background-color: black;
+  }
+  
+  #root {
+    min-height: 100vh;
+  }
+  /* App.css or index.css */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
