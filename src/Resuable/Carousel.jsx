@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import {
   FaLaptopCode,
   FaCode,
@@ -14,6 +15,7 @@ import { BsRobot } from "react-icons/bs";
 import { PiSecurityCameraFill } from "react-icons/pi";
 import { TbStackFront } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const cards = [
   {
@@ -104,6 +106,7 @@ const cards = [
     
   },
 ];
+
 
 const Carousel = () => {
   return (
