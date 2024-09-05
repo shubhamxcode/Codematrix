@@ -1,8 +1,9 @@
-import { configureStore } from "@reduxjs/toolkit";
-import cardreducer from '../app/store'
+// redux/store.js
+import { configureStore } from '@reduxjs/toolkit';
+import favoritesReducer from "../Feature/addtofav/Addtofav"
 
-export const store=configureStore({
-    reducer:{
-        cards:cardreducer,
-    }
-})
+export const store = configureStore({
+  reducer:{
+    favorites:favoritesReducer,
+  },
+});
