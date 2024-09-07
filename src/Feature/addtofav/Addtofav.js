@@ -17,5 +17,5 @@ const favoritesslice=createSlice({
 
 
 export const{addtofav,removetofav}=favoritesslice.actions;
-export default favoritesslice.reducer;
+export default favoritesslice.reducer
 

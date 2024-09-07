@@ -5,6 +5,7 @@ import About from "./components/About/About.jsx";
 import Frontend from "./components/languages/Frontend.jsx";
 import Backend from "./components/languages/Backend.jsx";
 import Chatai from "./Chatbot.jsx";
+import Addecards from "./Addecards.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='frontend'  element={<Frontend />} />
           <Route path="backend" element={<Backend />} />
           <Route path="chatai" element={<Chatai/>}/>
+          <Route path="addedcards" element={<Addecards/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

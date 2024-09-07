@@ -21,16 +21,14 @@ import { nanoid } from "@reduxjs/toolkit";
 
 const cards = [
   {
-    iid:nanoid(),
+    id:nanoid(),
     title: "FRONTEND",
     description: "The complete guide for frontend",
     image: <FaCode />,
     to: "/frontend",
-
-    
   },
   {
-    iid:nanoid(),
+    id:nanoid(),
     title: "BACKEND",
     description: "The complete guide for Backend",
     image: <FaLaptopCode />,
@@ -38,70 +36,70 @@ const cards = [
     
   },
   {
-    iid:nanoid(),
+    id:nanoid(),
     title: "HACKING",
     description: "The complete guide for Hacking",
     image: <FaHackerrank />,
     
   },
   {
-    iid:nanoid(),
+    id:nanoid(),
     title: "APP DEVELOPMENT",
     description: "The complete guide for App dev",
     image: <FaAppStoreIos />,
     
   },
   {
-    iid:nanoid(),
+    id:nanoid(),
     title: "GAME DEV",
     description: "The complete guide for Game dev",
     image: <VscGame />,
     
   },
   {
-    iid:nanoid(),
+    id:nanoid(),
     title: "DATA SCIENCE",
     description: "The complete guide for Data science",
     image: <FaDatabase />,
     
   },
   {
-    iid:nanoid(),
+    id:nanoid(),
     title: "ARTIFICIAL INTELLIGENCE",
     description: "The complete guide for AI",
     image: <BsRobot />,
     
   },
   {
-    iid:nanoid(),
+    id:nanoid(),
     title: "CYBER SECURITY",
     description: "The complete guide for Cyber security",
     image: <PiSecurityCameraFill />,
     
   },
   {
-    iid:nanoid(),
+    id:nanoid(),
     title: "MERN STACK",
     description: "The complete guide for MERN stack",
     image: <TbStackFront />,
     
   },
   {
-    iid:nanoid(),
+    id:nanoid(),
     title: "DEV OPS",
     description: "The complete guide for DevOps",
     image: <FaDev />,
     
   },
   {
-    iid:nanoid(),
+    id:nanoid(),
     title: "CLOUD COMPUTING",
     description: "The complete guide for Cloud computing",
     image: <FaCloud />,
     
   },
   {
-    iid:nanoid(),
+    id:nanoid(),
     title: "LINUX",
     description: "The complete guide for Linux",
     image: <FaLinux />,
@@ -129,7 +127,7 @@ const Carousel = () => {
           <p className="font-semibold text-white">{card.description}</p>
         </Link>
         <div className="flex justify-evenly">
-          {isfav(card.id) ? (
+          {isfav(card.id)? (
               <button  onClick={()=>dispatch(removetofav(card.id))} className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Remove</button>
           ):(
             <button  onClick={()=>dispatch(addtofav(card.id))} className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition duration-300">AddFav</button>

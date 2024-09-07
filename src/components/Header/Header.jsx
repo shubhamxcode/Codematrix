@@ -38,7 +38,7 @@ function Header() {
             <Link to="#" className='text-white font-bold border hover:bg-green-600 border-white bg-black px-4 rounded-2xl'>
               Login
             </Link>
-            <Link to="#" className='text-white font-bold border hover:bg-green-600 border-white bg-black px-4 rounded-2xl'>
+            <Link to="/addedcards" className='text-white font-bold border hover:bg-green-600 border-white bg-black px-4 rounded-2xl'>
               &hearts; Your Fav ({favoriteCount})
             </Link>
           </div>
