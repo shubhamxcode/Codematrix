@@ -12,7 +12,7 @@ const favoritesslice=createSlice({
     removetofav:(state,action)=>{
       state.items=state.items.filter((card)=>card.id!==action.payload)
     }
-  }
+  } 
 })
 
 

@@ -111,7 +111,7 @@ const cards = [
 const Carousel = () => {
   const dispatch=useDispatch();
   const favitem=useSelector((state) => state.favorites.items)
-  const isfav=(card)=>favitem.includes(card)
+  const isfav=(id)=>favitem.includes(id)
   return (
     <div className="flex flex-wrap justify-center">
       {cards.map((card) => (
