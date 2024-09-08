@@ -10,7 +10,7 @@ const favoritesslice=createSlice({
       state.items.push(action.payload);
     },
     removetofav:(state,action)=>{
-      state.items=state.items.filter((id)=>id!==action.payload)
+      state.items=state.items.filter((card)=>card.id!==action.payload)
     }
   }
 })

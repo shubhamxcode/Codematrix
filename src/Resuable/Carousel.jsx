@@ -111,7 +111,7 @@ const cards = [
 const Carousel = () => {
   const dispatch=useDispatch();
   const favitem=useSelector((state) => state.favorites.items)
-  const isfav=(id)=>favitem.includes(id)
+  const isfav=(card)=>favitem.includes(card)
   return (
     <div className="flex flex-wrap justify-center">
       {cards.map((card) => (
@@ -127,10 +127,10 @@ const Carousel = () => {
           <p className="font-semibold text-white">{card.description}</p>
         </Link>
         <div className="flex justify-evenly">
-          {isfav(card.id)? (
+          {isfav(card)? (
               <button  onClick={()=>dispatch(removetofav(card.id))} className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Remove</button>
           ):(
-            <button  onClick={()=>dispatch(addtofav(card.id))} className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition duration-300">AddFav</button>
+            <button  onClick={()=>dispatch(addtofav(card))} className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition duration-300">AddFav</button>
           )}
       
         </div>
