@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import Frontend from "../languages/Frontend";
 import Card from "../../Resuable/Carousel";
 function Home() {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef();
 
   const handleScroll = (direction) => {
     if (scrollRef.current) {

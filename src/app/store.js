@@ -1,4 +1,4 @@
-// redux/store.js
+
 import { configureStore } from '@reduxjs/toolkit';
 import favoritesReducer from "../Feature/addtofav/Addtofav"
 
@@ -7,3 +7,5 @@ export const store = configureStore({
     favorites:favoritesReducer,
   },
 });
+
+export default store
