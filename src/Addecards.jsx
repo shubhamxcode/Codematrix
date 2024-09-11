@@ -20,7 +20,7 @@ const AddedCardsHeader = () => {
           <div key={card.id} className="m-4">
             <Link to={card.to} className="cursor-pointer bg-black border border-gray-700 shadow-lg p-6 rounded-lg hover:bg-green-700 hover:shadow-xl w-96 h-80 flex flex-col items-center justify-center text-center transition-transform transform hover:scale-110">
               <div className="text-5xl text-white mb-4">
-                {card.image}
+                
               </div>
               <h1 className="font-bold text-green-500 mb-2">{card.title}</h1>
               <p className="font-semibold text-white">{card.description}</p>

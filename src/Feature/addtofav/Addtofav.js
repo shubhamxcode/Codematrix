@@ -1,16 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+ const savfav=(items)=>{
+  localStorage.setItem("favorites",JSON.stringify(items))
+ }
+ const intialfav=JSON.parse(localStorage.getItem("favorites"))
+
+
 const favoritesslice=createSlice({
   name:'favorites',
   initialState:{
-    items:[]
+    items:intialfav,
   },
   reducers:{
     addtofav:(state,action)=>{
-      state.items.push(action.payload);
+      if (!state.items.some((item)=>item.id==action.payload.id)){
+        state.items.push(action.payload)
+        savfav(state.items)
+      }
     },
     removetofav:(state,action)=>{
-      state.items=state.items.filter((card)=>card.id!==action.payload)
+      state.items=state.items.filter((item)=>item.id!==action.payload)
+      savfav(state.items)
     }
   } 
 })
@@ -18,4 +28,3 @@ const favoritesslice=createSlice({
 
 export const{addtofav,removetofav}=favoritesslice.actions;
 export default favoritesslice.reducer
-
