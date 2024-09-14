@@ -35,7 +35,7 @@ function Home() {
           </div>
           <div className="text-gray-400 text-2xl flex flex-col lg:flex-row items-center justify-around">
             <p className="lg:w-2/3 mb-8 lg:mb-0">
-              Our project is dedicated to providing comprehensive information
+              Our website is dedicated to providing comprehensive information
               about various coding-related fields, catering to both beginners
               and experienced developers. The platform serves as a one-stop
               resource for learning about different aspects of programming,
