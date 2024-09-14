@@ -21,14 +21,14 @@ import { nanoid } from "@reduxjs/toolkit";
 
 const cards = [
   {
-    id:nanoid(),
+    id:1,
     title: "FRONTEND",
     description: "The complete guide for frontend",
     image: <FaCode />,
     to: "/frontend",
   },
   {
-    id:nanoid(),
+    id:2,
     title: "BACKEND",
     description: "The complete guide for Backend",
     image: <FaLaptopCode />,
@@ -36,70 +36,70 @@ const cards = [
     
   },
   {
-    id:nanoid(),
+    id:3,
     title: "HACKING",
     description: "The complete guide for Hacking",
     image: <FaHackerrank />,
     
   },
   {
-    id:nanoid(),
+    id:4,
     title: "APP DEVELOPMENT",
     description: "The complete guide for App dev",
     image: <FaAppStoreIos />,
     
   },
   {
-    id:nanoid(),
+    id:5,
     title: "GAME DEV",
     description: "The complete guide for Game dev",
     image: <VscGame />,
     
   },
   {
-    id:nanoid(),
+    id:6,
     title: "DATA SCIENCE",
     description: "The complete guide for Data science",
     image: <FaDatabase />,
     
   },
   {
-    id:nanoid(),
+    id:7,
     title: "ARTIFICIAL INTELLIGENCE",
     description: "The complete guide for AI",
     image: <BsRobot />,
     
   },
   {
-    id:nanoid(),
+    id:8,
     title: "CYBER SECURITY",
     description: "The complete guide for Cyber security",
     image: <PiSecurityCameraFill />,
     
   },
   {
-    id:nanoid(),
+    id:9,
     title: "MERN STACK",
     description: "The complete guide for MERN stack",
     image: <TbStackFront />,
     
   },
   {
-    id:nanoid(),
+    id:10,
     title: "DEV OPS",
     description: "The complete guide for DevOps",
     image: <FaDev />,
     
   },
   {
-    id:nanoid(),
+    id:11,
     title: "CLOUD COMPUTING",
     description: "The complete guide for Cloud computing",
     image: <FaCloud />,
     
   },
   {
-    id:nanoid(),
+    id:12,
     title: "LINUX",
     description: "The complete guide for Linux",
     image: <FaLinux />,
@@ -111,8 +111,7 @@ const cards = [
 const Carousel = () => {
   const dispatch=useDispatch();
   const favitem=useSelector((state) => state.favorites.items)
-  const isfav = (id) => favitem.some((item) => item.id === id);
-
+  const isfav=(id)=>favitem.some((item)=>item.id==id)
   return (
     <div className="flex flex-wrap justify-center">
       {cards.map((card) => (
@@ -127,7 +126,7 @@ const Carousel = () => {
           <h1 className="font-bold text-green-500 mb-2">{card.title}</h1>
           <p className="font-semibold text-white">{card.description}</p>
         </Link>
-        <div className="flex justify-center">
+        <div className="flex justify-evenly">
           {isfav(card.id)? (
               <button  onClick={()=>dispatch(removetofav(card.id))} className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Remove</button>
           ):(
