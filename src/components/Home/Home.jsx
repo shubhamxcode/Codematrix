@@ -1,29 +1,10 @@
 import { useRef } from "react";
-import ytchannel6 from "../../images/hitesh.png";
-import ytchannel7 from "../../images/khapra dii.jpg";
-import ytchannel8 from "../../images/codecamp.png";
 
-import ytchannel1 from "../../images/Hitesh choudhry.jpg";
-import ytchannel2 from "../../images/freecodecamp.jpeg";
-import ytchannel3 from "../../images/code with harry.jpg";
-import ytchannel4 from "../../images/Apni kaksha .jpg";
-import ytchannel5 from "../../images/ezsnippet.jpg";
 import intro from "../../images/illustration-intro.png";
-import { Link } from "react-router-dom";
-import Frontend from "../languages/Frontend";
 import Card from "../../Resuable/Carousel";
+import Scrolbar from "../scrolbar";
 function Home() {
   const scrollRef = useRef();
-
-  const handleScroll = (direction) => {
-    if (scrollRef.current) {
-      if (direction === "right") {
-        scrollRef.current.scrollLeft += 100; // Scrolls right by 100px
-      } else {
-        scrollRef.current.scrollLeft -= 100; // Scrolls left by 100px
-      }
-    }
-  };
 
   return (
     <div className="bg-black">
@@ -68,65 +49,8 @@ function Home() {
       <div id="Cardparent" className="flex flex-wrap justify-between">
         <Card />
       </div>
-      <h1 className="text-white font-bold flex justify-center mt-24 text-5xl hover:underline ">
-        Some Great Coding Channel Suggestions
-      </h1>
-      <div className="text-white relative mt-32">
-        <div className="absolute top-1/2  transform -translate-y-1/2">
-          <button onClick={() => handleScroll("left")} className="text-7xl">
-            {"<"}
-          </button>
-        </div>
-        <div
-          ref={scrollRef}
-          className="flex whitespace-nowrap w-[80%] h-64 overflow-hidden m-auto rounded-2xl aspect-3/2 space-x-4 "
-        >
-          <img
-            src={ytchannel7}
-            alt="channel1"
-            className="w-64 h-64 rounded-lg"
-          />
-          <img
-            src={ytchannel7}
-            alt="channel2"
-            className="w-64 h-64 rounded-lg"
-          />
-          <img
-            src={ytchannel7}
-            alt="channel3"
-            className="w-64 h-64 rounded-lg"
-          />
-          <img
-            src={ytchannel7}
-            alt="channel4"
-            className="w-64 h-64 rounded-lg"
-          />
-          <img
-            src={ytchannel7}
-            alt="channel5"
-            className="w-64 h-64 rounded-lg"
-          />
-          <img
-            src={ytchannel7}
-            alt="channel6"
-            className="w-64 h-64 rounded-lg"
-          />
-          <img
-            src={ytchannel7}
-            alt="channel7"
-            className="w-64 h-64 rounded-lg"
-          />
-          <img
-            src={ytchannel7}
-            alt="channel8"
-            className="w-64 h-64 rounded-lg"
-          />
-        </div>
-        <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
-          <button onClick={() => handleScroll("right")} className="text-7xl">
-            {">"}
-          </button>
-        </div>
+      <div>
+        <Scrolbar/>
       </div>
     </div>
   );
