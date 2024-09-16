@@ -48,7 +48,7 @@ function scrolbar() {
     <div ref={scrollRef}  className="flex gap-2 overflow-hidden">
        {images.map((image)=>(
         <Link to={image.to} key={image.id} className='flex-shrink-0 '>
-          <img src={image.image} alt="notfound" className=' rounded-lg w-56 h-44 hover:cursor-pointer'/>
+          <img src={image.image} alt="notfound" className=' rounded-lg w-56 h-44 hover:cursor-pointer transition-all  duration-500 hover:scale-125 '/>
           <div className='flex justify-center mt-2' >
           <button className='bg-blue-500 text-white font-bold py-1 px-12 rounded hover:bg-blue-700 transition duration-300 hover:scale-110'>{image.text}</button>
           </div>
