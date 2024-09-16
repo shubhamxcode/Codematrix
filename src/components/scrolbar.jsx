@@ -41,22 +41,22 @@ function scrolbar() {
         Some Great Coding Channel Suggestions
       </h1>
     <div className="absolute top-1/2  transform -translate-y-1/2 hover:border hover:bg-gray-400 ">
-      <button onClick={() => handleScroll("left")} className="text-7xl">
+      <button onClick={() => handleScroll("left")} className="text-8xl">
         {"<"}
       </button>
     </div>
-    <div ref={scrollRef}  className="flex gap-2 overflow-hidden">
+    <div ref={scrollRef}  className="flex gap-2 overflow-hidden w-[70%] m-auto">
        {images.map((image)=>(
         <Link to={image.to} key={image.id} className='flex-shrink-0 '>
-          <img src={image.image} alt="notfound" className=' rounded-lg w-56 h-44 hover:cursor-pointer transition-all  duration-500 hover:scale-125 '/>
+          <img src={image.image} alt="notfound" className=' rounded-lg w-56 h-44 hover:cursor-pointer transition-all  duration-300 hover:scale-125 hover:space-x-6 '/>
           <div className='flex justify-center mt-2' >
-          <button className='bg-blue-500 text-white font-bold py-1 px-12 rounded hover:bg-blue-700 transition duration-300 hover:scale-110'>{image.text}</button>
+          <button className='bg-blue-500 text-white font-bold py-1 px-12 rounded hover:bg-blue-700 transition duration-300 '>{image.text}</button>
           </div>
         </Link>
        ))}
     </div>
     <div className="absolute top-1/2 right-0 transform -translate-y-1/2 hover:border hover:bg-gray-400">
-      <button onClick={() => handleScroll("right")} className="text-7xl">
+      <button onClick={() => handleScroll("right")} className="text-8xl">
         {">"}
       </button>
     </div>
