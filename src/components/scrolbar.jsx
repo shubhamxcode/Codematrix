@@ -21,7 +21,7 @@ const images=[
     {id:"5",image:Img5,to:"https://youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop&si=uC5kZAeP9LwylMV8",text:"Dsa"},
     {id:"6",image:Img6,to:"https://www.youtube.com/watch?v=ZbG0c87wcM8&list=PL9gnSGHSqcnoqBXdMwUTRod4Gi3eac2Ak",text:"Devops"},
     {id:"7",image:Img7,to:"https://www.youtube.com/watch?v=mEsleV16qdo",text:"AI"},
-    {id:"8",image:Img8,to:"https://www.youtube.com/watch?v=u64gyCdqawU",text:"App development"},
+    {id:"8",image:Img8,to:"https://www.youtube.com/watch?v=u64gyCdqawU",text:"App dev"},
     {id:"9",image:Img9,to:"https://www.youtube.com/watch?v=sWbUDq4S6Y8&t=8072s",text:"Linux"},
     {id:"10",image:Img10,to:"https://www.youtube.com/watch?v=NhDYbskXRgc",text:"AWS"},
 ]
@@ -45,11 +45,13 @@ function scrolbar() {
         {"<"}
       </button>
     </div>
-    <div ref={scrollRef}  className="flex gap-4 overflow-hidden">
+    <div ref={scrollRef}  className="flex gap-2 overflow-hidden">
        {images.map((image)=>(
         <Link to={image.to} key={image.id} className='flex-shrink-0 '>
-          <img src={image.image} alt={image.id} className=' rounded-lg w-48 h-52 hover:cursor-pointer'/>
-          <button className='bg-blue-500 text-white font-bold py-2 px-28 rounded hover:bg-blue-700 transition duration-300'>{image.text}</button>
+          <img src={image.image} alt="notfound" className=' rounded-lg w-56 h-44 hover:cursor-pointer'/>
+          <div className='flex justify-center mt-2' >
+          <button className='bg-blue-500 text-white font-bold py-1 px-12 rounded hover:bg-blue-700 transition duration-300 hover:scale-110'>{image.text}</button>
+          </div>
         </Link>
        ))}
     </div>
