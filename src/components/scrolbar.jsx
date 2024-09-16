@@ -5,15 +5,16 @@ import Img2 from '../images/code with harry.jpg'
 import Img3 from '../images/codecamp.png'
 import Img4 from '../images/ezsnippet.jpg'
 import Img5 from '../images/Hitesh choudhry.jpg'
-import Img6 from '../images/Hitesh choudhry.jpg'
+import { Link } from 'react-router-dom';
+
 
 const images=[
-    {id:"1",image:Img1},
-    {id:"2",image:Img2},
-    {id:"3",image:Img3},
-    {id:"4",image:Img4},
-    {id:"5",image:Img5},
-    {id:"6",image:Img6},
+    {id:"1",image:Img2,to:"https://www.youtube.com/@CodeWithHarry"},
+    {id:"2",image:Img3},
+    {id:"3",image:Img4},
+    {id:"4",image:Img5},
+    {id:"5",image:Img1},
+    {id:"6",image:Img1},
     {id:"7",image:Img1},
     {id:"8",image:Img1},
     {id:"9",image:Img1},
@@ -41,9 +42,11 @@ function scrolbar() {
         {"<"}
       </button>
     </div>
-    <div ref={scrollRef}  className="flex overflow-hidden h-44  m-auto space-x-4 ">
+    <div ref={scrollRef}  className="flex gap-2 overflow-hidden">
        {images.map((image)=>(
-          <img src={image.image} alt={image.id} key={image.id} className=' rounded-lg aspect-1 '/>
+        <Link to={image.to} key={image.id} className='flex-shrink-0 '>
+          <img src={image.image} alt={image.id} className=' rounded-lg w-44 h-44 hover:cursor-pointer'/>
+        </Link>
        ))}
     </div>
     <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
