@@ -17,7 +17,6 @@ import { TbStackFront } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addtofav,removetofav } from "../Feature/addtofav/Addtofav";
-import { nanoid } from "@reduxjs/toolkit";
 
 const cards = [
   {
@@ -51,7 +50,7 @@ const cards = [
   },
   {
     id:5,
-    title: "GAME DEV",
+    title: "DSA",
     description: "The complete guide for Game dev",
     image: <VscGame />,
     
