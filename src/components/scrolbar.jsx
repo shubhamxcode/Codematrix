@@ -45,7 +45,7 @@ function scrolbar() {
         {"<"}
       </button>
     </div>
-    <div ref={scrollRef}  className="flex gap-2 overflow-hidden w-[70%] m-auto">
+    <div ref={scrollRef}  className="flex gap-6 overflow-hidden w-[70%] m-auto">
        {images.map((image)=>(
         <Link to={image.to} key={image.id} className='flex-shrink-0 '>
           <img src={image.image} alt="notfound" className=' rounded-lg w-56 h-44 hover:cursor-pointer transition-all  duration-300 hover:scale-125 hover:space-x-6 '/>

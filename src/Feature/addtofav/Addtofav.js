@@ -3,10 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
  const savfav=(items)=>{
   localStorage.setItem("favorites",JSON.stringify(items))
  }
-
- 
  const intialfav=JSON.parse(localStorage.getItem("favorites"))
- console.log(intialfav);
+
 
 const favoritesslice=createSlice({
   name:'favorites',

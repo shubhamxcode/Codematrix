@@ -50,7 +50,7 @@ const cards = [
   },
   {
     id:5,
-    title: "DSA",
+    title: "Game dev",
     description: "The complete guide for Game dev",
     image: <VscGame />,
     
