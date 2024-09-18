@@ -30,33 +30,35 @@ function scrolbar() {
     const scrollRef = useRef();
     const handleScroll = (direction) => {
           if (direction === "right") {
-            scrollRef.current.scrollLeft += 100; // Scrolls right by 100px
+            scrollRef.current.scrollLeft += 100; 
           } else {
-            scrollRef.current.scrollLeft -= 100; // Scrolls left by 100px
+            scrollRef.current.scrollLeft -= 100; 
         }
       };
   return (
   <div className="text-white relative space-y-12 ">
-    <h1 className="text-white font-bold flex justify-center mt-24 text-5xl hover:underline ">
+    <div className=''>
+    <h1 className="text-white text-center hover:underline md:text-4xl text-2xl md:text-5x">
         Some Great Coding Channel Suggestions
       </h1>
-    <div className="absolute top-1/2  transform -translate-y-1/2 hover:border hover:bg-gray-400 ">
-      <button onClick={() => handleScroll("left")} className="text-8xl">
+    </div>
+    <div className="absolute top-1/2  sm:left-[10%] transform -translate-y-1/2 hover:border hover:bg-gray-400 ">
+      <button onClick={() => handleScroll("left")} className="sm:text-8xl text-6xl">
         {"<"}
       </button>
     </div>
-    <div ref={scrollRef}  className="flex gap-6 overflow-hidden w-[70%] m-auto">
+    <div ref={scrollRef}  className="flex gap-6 overflow-hidden w-[80%] m-auto">
        {images.map((image)=>(
         <Link to={image.to} key={image.id} className='flex-shrink-0 '>
-          <img src={image.image} alt="notfound" className=' rounded-lg w-56 h-44 hover:cursor-pointer transition-all  duration-300 hover:scale-125 hover:space-x-6 '/>
+          <img src={image.image} alt="notfound" className=' rounded-lg w-72 h-44 hover:cursor-pointer transition-all  duration-300 hover:scale-125 hover:space-x-6 '/>
           <div className='flex justify-center mt-2' >
-          <button className='bg-blue-500 text-white font-bold py-1 px-12 rounded hover:bg-blue-700 transition duration-300 '>{image.text}</button>
+          <button className='bg-blue-500 text-white font-bold px-12 rounded hover:bg-blue-700 transition duration-300 '>{image.text}</button>
           </div>
         </Link>
        ))}
     </div>
-    <div className="absolute top-1/2 right-0 transform -translate-y-1/2 hover:border hover:bg-gray-400">
-      <button onClick={() => handleScroll("right")} className="text-8xl">
+    <div className="absolute top-1/2 right-0 sm:right-[10%] transform -translate-y-1/2 hover:border hover:bg-gray-400">
+      <button onClick={() => handleScroll("right")} className="sm:text-8xl text-6xl">
         {">"}
       </button>
     </div>

@@ -4,9 +4,7 @@ import Card from "../../Resuable/Carousel";
 import Scrolbar from "../scrolbar";
 function Home() {
   return (
-    <div className="">
-      <div className="py-10">
-        <div className="">
+    <div className="  flex flex-col justify-center ">
         <div className="text-gray-300 text-center">
           <h1 className="text-4xl lg:text-7xl font-bold">The Future Skill</h1>
           <p className="text-xl lg:text-3xl font-bold mt-4">It's Code Matrix</p>
@@ -36,8 +34,6 @@ function Home() {
               Learn More
             </button>
           </div>
-        </div>
-      </div>
       <div className="flex items-center justify-center font-bold">
         <h1 className="text-white text-center hover:underline text-2xl md:text-5x">
           Tech Resources for Developers
