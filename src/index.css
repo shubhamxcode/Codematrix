@@ -11,14 +11,11 @@ html, body, #root {
   
   body {
     background-color: black;
-    width:100%;
-    margin: auto;
   }
   
   #root {
     min-height: 100vh;
   }
-  /* App.css or index.css */
 .smooth-scroll {
   scroll-behavior: smooth;
 }

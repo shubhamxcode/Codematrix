@@ -7,10 +7,10 @@ function Home() {
     <div className="">
       <div className="py-10">
         <div className="">
-          <div className="text-gray-300 text-center mb-8">
-            <h1 className="text-7xl font-bold text-[42px] lg:text-[4rem]">The Future Skill</h1>
-            <h2 className="text-[32px] font-bold mt-4 lg:text-[4rem]">It's Code Matrix</h2>
-          </div>
+        <div className="text-gray-300 text-center">
+          <h1 className="text-4xl lg:text-7xl font-bold">The Future Skill</h1>
+          <p className="text-xl lg:text-3xl font-bold mt-4">It's Code Matrix</p>
+        </div>
           <div className="flex flex-col  lg:flex-row items-center ">
             <p className="text-gray-400 text-justify md:text-[18px] lg:text-[21px] mb-8  sm:text-[18px]">
               Our website is dedicated to providing comprehensive information
@@ -27,7 +27,7 @@ function Home() {
             <img
               src={intro}
               alt="Illustration of coding and technology"
-              className=" sm:mt-2 md:w-[40%] md:mt-2 w-[50%] lg:w-[30%] inline-block mt-1"
+              className=" sm:mt-2  sm:w-[70%] md:mt-2 w-[50%] lg:w-[30%] inline-block mt-1"
             />
           </div>
           <div className="text-center mt-10">
@@ -38,8 +38,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="flex items-center h-96 justify-center text- font-bold">
-        <h1 className="text-5xl text-white hover:underline">
+      <div className="flex items-center justify-center font-bold">
+        <h1 className="text-white text-center hover:underline text-2xl md:text-5x">
           Tech Resources for Developers
         </h1>
       </div>
