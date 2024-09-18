@@ -1,21 +1,18 @@
-import { useRef } from "react";
 
 import intro from "../../images/illustration-intro.png";
 import Card from "../../Resuable/Carousel";
 import Scrolbar from "../scrolbar";
 function Home() {
-  const scrollRef = useRef();
-
   return (
-    <div className="bg-black">
+    <div className="">
       <div className="py-10">
         <div className="">
           <div className="text-gray-300 text-center mb-8">
-            <h1 className="text-7xl font-bold">The Future Skill</h1>
-            <h2 className="text-5xl font-bold mt-4">It's Code Matrix</h2>
+            <h1 className="text-7xl font-bold text-[42px] lg:text-[4rem]">The Future Skill</h1>
+            <h2 className="text-[32px] font-bold mt-4 lg:text-[4rem]">It's Code Matrix</h2>
           </div>
-          <div className="text-gray-400 text-2xl flex flex-col lg:flex-row items-center justify-around">
-            <p className="lg:w-2/3 mb-8 lg:mb-0">
+          <div className="flex flex-col  lg:flex-row items-center ">
+            <p className="text-gray-400 text-justify md:text-[18px] lg:text-[21px] mb-8  sm:text-[18px]">
               Our website is dedicated to providing comprehensive information
               about various coding-related fields, catering to both beginners
               and experienced developers. The platform serves as a one-stop
@@ -30,7 +27,7 @@ function Home() {
             <img
               src={intro}
               alt="Illustration of coding and technology"
-              className="w-full lg:w-[30%] inline-block mt-[-50px] lg:mt-0"
+              className=" sm:mt-2 md:w-[40%] md:mt-2 w-[50%] lg:w-[30%] inline-block mt-1"
             />
           </div>
           <div className="text-center mt-10">

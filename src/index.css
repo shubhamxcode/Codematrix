@@ -11,6 +11,8 @@ html, body, #root {
   
   body {
     background-color: black;
+    width:100%;
+    margin: auto;
   }
   
   #root {
