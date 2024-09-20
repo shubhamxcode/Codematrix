@@ -3,19 +3,19 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import logo from '../../images/logomatrix.jpg';
 import { Link, NavLink } from 'react-router-dom';
+import { BiLogoCodepen } from "react-icons/bi";
 
 function Header() {
   const favoriteCount = useSelector((state) => state.favorites.items.length);
 
   return (
-    <header className=''>
+    <header className='mt-2'>
       <nav className='text-white'>
-          <ul>
-          <div className='flex items-center justify-between'>
+          <ul className='flex  justify-between flex-col sm:flex-row'>
             <li>
-              <img src={logo} alt="Matrix Logo" className='w-40 md:w-40 sm:w-20 cursor-pointer' />
+              <BiLogoCodepen  className='sm:text-[34px] md:text-[40px] lg:text-[52px] text-[28px]'/>
             </li>
-            <div className='flex space-x-4 text-[16px] sm:text-[18px] md:text-[22px]'>
+            <div className='flex space-x-8 text-[16px] sm:text-[20px] md:text-[27px]'>
             <li>
               <NavLink to="/" className={({ isActive }) => `${isActive ? "text-red-700" : "text-gray-700"}`}>
                 Home
@@ -39,13 +39,13 @@ function Header() {
             </div>
             <li className='flex gap-2'>
             <Link to="#" className=''>
-              <button className='sm:px-4 px-4 border border-white sm:border-white rounded-xl '>Login</button>
+              <button className=' md:text-lg sm:px-4 text-sm lg:text-xl  px-4 border border-white sm:border-white rounded-xl '>Login</button>
             </Link>
             <Link to="/addedcards">
-              <button className='text-nowrap sm:px-2 px-4 border border-white rounded-xl  hover:bg-green-600 '>&hearts; Your Fav ({favoriteCount})</button>
+              <button className=' md:text-lg  lg:text-xl  text-sm text-nowrap sm:px-2 px-4 border border-white rounded-xl  hover:bg-green-600 '>&hearts; Your Fav ({favoriteCount})</button>
             </Link>
           </li>
-          </div>
+         
           </ul>
       </nav>
     </header>

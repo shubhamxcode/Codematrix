@@ -37,8 +37,8 @@ function scrolbar() {
       };
   return (
   <div className="text-white relative space-y-12 ">
-    <div className=''>
-    <h1 className="text-white text-center hover:underline md:text-4xl text-2xl md:text-5x">
+    <div className='pt-8 whitespace-nowrap'>
+    <h1 className="text-white text-center hover:underline  text-[18px] md:text-4xl">
         Some Great Coding Channel Suggestions
       </h1>
     </div>
