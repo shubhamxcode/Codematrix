@@ -1,7 +1,6 @@
-// Header
+
 import React from 'react';
 import { useSelector } from 'react-redux';
-import logo from '../../images/logomatrix.jpg';
 import { Link, NavLink } from 'react-router-dom';
 import { BiLogoCodepen } from "react-icons/bi";
 
