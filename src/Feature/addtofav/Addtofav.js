@@ -29,13 +29,9 @@ const favoritesslice=createSlice({
     },
     toggletheme:(state)=>{
       state.theme=state.theme==='dark'?'light':'dark';
-     
       savtheame(state.theme)
     },
-    settheme:(state,action)=>{
-      state.theme=action.payload;
-      savtheame(state.theme);
-    }
+   
   } 
 })
 
