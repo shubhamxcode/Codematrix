@@ -36,7 +36,7 @@ function scrolbar() {
         }
       };
   return (
-  <div className="text-white relative space-y-12 ">
+  <div className="relative space-y-12 ">
     <div className='pt-8 flex  flex-col flex-wrap'>
     <h1 className="text-center hover:underline text-[20px] md:text-4xl">
         Some Great Coding Channel Suggestions
