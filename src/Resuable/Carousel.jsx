@@ -117,7 +117,7 @@ const Carousel = () => {
         <div  key={card.id} className="">
         <Link
           to={card.to ||"we are still working"}
-          className="cursor-pointer  bg-black border border-gray-700 shadow-lg rounded-lg w-72 h-72 sm:w-96 sm:h-96 hover:bg-green-700 hover:shadow-xl m-4  flex flex-col items-center justify-center text-center transition-transform   transform hover:scale-110"
+          className="cursor-pointer border border-gray-700 shadow-lg rounded-lg w-72 h-72 sm:w-96 sm:h-96 hover:bg-green-700 hover:shadow-xl m-4  flex flex-col items-center justify-center text-center transition-transform   transform hover:scale-110"
         >
           <div className="text-4xl text-white mb-4">
             {card.image}

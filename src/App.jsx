@@ -6,8 +6,15 @@ import Frontend from "./components/languages/Frontend.jsx";
 import Backend from "./components/languages/Backend.jsx";
 import Chatai from "./Chatbot.jsx";
 import Addecards from "./Addecards.jsx";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 function App() {
+  const theme = useSelector((state) => state.Theme.theme || 'dark');
+  useEffect(() => {
+    document.body.className= theme === 'dark' ? 'dark-mode' : 'light-mode';
+  }, [theme])
+  
   return (
     <BrowserRouter>
       <Routes>

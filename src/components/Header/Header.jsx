@@ -3,15 +3,20 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import { BiLogoCodepen } from "react-icons/bi";
+import { toggletheme } from '../../Feature/addtofav/Addtofav';
 
 function Header() {
   const favoriteCount = useSelector((state) => state.favorites.items.length);
   const dispatch=useDispatch();
-  
+  const theme=useSelector((state)=>{
+    state.Theme.theme 
+  })
+
+
   return (
-    <header className=''>
-      <nav className='text-white'>
-          <ul className='flex  justify-between flex-col sm:flex-row'>
+    <header>
+      <nav className=''>
+          <ul className='flex justify-between flex-col sm:flex-row'>
             <li>
               <BiLogoCodepen  className='sm:text-[34px] md:text-[40px] lg:text-[52px] text-[28px]'/>
             </li>
@@ -38,8 +43,8 @@ function Header() {
             </li>
             </div>
             <li className='flex gap-2'>
-              <div>
-              <button className=' md:text-lg sm:px-4 text-sm lg:text-xl  px-4 border border-white sm:border-white rounded-xl'>🌙</button>
+              <div className=''>
+              <button onClick={()=>dispatch(toggletheme())}className=' md:text-lg sm:px-4 text-sm lg:text-xl  px-4 border border-white sm:border-white rounded-xl'> {theme==='dark'?'light':'dark'}</button>
               </div>
             <Link to="#" className=''>
               <button className=' md:text-lg sm:px-4 text-sm lg:text-xl  px-4 border border-white sm:border-white rounded-xl '>Login</button>

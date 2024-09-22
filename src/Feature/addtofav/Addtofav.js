@@ -9,6 +9,7 @@ const savtheame=(theme)=>{
   localStorage.setItem("thememode",JSON.stringify(theme))
 }
 const intialtheme=JSON.parse(localStorage.getItem("thememode"))
+
 const favoritesslice=createSlice({
   name:'favorites',
   initialState:{
@@ -27,7 +28,8 @@ const favoritesslice=createSlice({
       savfav(state.items)
     },
     toggletheme:(state)=>{
-      state.theme=state.theme==='light'?'dark':'light';
+      state.theme=state.theme==='dark'?'light':'dark';
+     
       savtheame(state.theme)
     },
     settheme:(state,action)=>{
@@ -36,6 +38,7 @@ const favoritesslice=createSlice({
     }
   } 
 })
+
 
 
 export const{addtofav,removetofav,toggletheme,settheme}=favoritesslice.actions;

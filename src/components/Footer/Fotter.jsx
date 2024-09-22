@@ -7,11 +7,11 @@ import logo from '../../images/logomatrix.jpg';
 
 function Fotter() {
   return (
-    <footer className='bg-black py-16 px-6'>
+    <footer className='py-16 px-6'>
       <hr className='border-gray-700'/>
       <div className='flex justify-between items-center'>
         <div>
-          <img src={logo} alt="Logo" className='w-64' />
+          {/* <img src="" alt="Logo" className='w-64' /> */}
         </div>
         <div className='space-y-4'>
           <h2 className='text-white font-bold'>RESOURCES</h2>
