@@ -11,10 +11,8 @@ function Header() {
   const theme=useSelector((state)=>{
     state.Theme.theme 
   })
-
-
   return (
-    <header>
+    <header className='pt-4'>
       <nav className=''>
           <ul className='flex justify-between flex-col sm:flex-row'>
             <li>
@@ -44,13 +42,13 @@ function Header() {
             </div>
             <li className='flex gap-2'>
               <div className=''>
-              <button onClick={()=>dispatch(toggletheme())}className=' md:text-lg sm:px-4 text-sm lg:text-xl  px-4 border border-white sm:border-white rounded-xl'> {theme==='dark'?'light':'dark'}</button>
+              <button onClick={()=>dispatch(toggletheme())}className=' md:text-lg sm:px-4 text-sm lg:text-xl px-4 rounded-xl'> {theme==='dark'?'☀️':'🌙'}</button>
               </div>
             <Link to="#" className=''>
-              <button className=' md:text-lg sm:px-4 text-sm lg:text-xl  px-4 border border-white sm:border-white rounded-xl '>Login</button>
+              <button className=' hover:bg-green-600 md:text-lg sm:px-4 text-sm lg:text-xl px-4  rounded-xl '>Login</button>
             </Link>
             <Link to="/addedcards">
-              <button className=' md:text-lg  lg:text-xl  text-sm text-nowrap sm:px-2 px-4 border border-white rounded-xl  hover:bg-green-600 '>&hearts; Your Fav ({favoriteCount})</button>
+              <button className=' md:text-lg  lg:text-xl  text-sm text-nowrap sm:px-2 px-4  rounded-xl  hover:bg-green-600 '>&hearts; Your Fav ({favoriteCount})</button>
             </Link>
           </li>
          

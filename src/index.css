@@ -9,23 +9,19 @@ html, body, #root {
     width: 100%;
   }
   
-  body {
-    background-color: black;
-
-  }
-  
   #root {
     min-height: 100vh;
   }
 .smooth-scroll {
   scroll-behavior: smooth;
 }
-body.light-mode {
-  background-color:white;
+body.light-mode{
+  background-color: white;
   color: black;
+  font-weight: bold;
 }
-
-body.dark-mode {
+body.dark-mode{
   background-color: black;
   color: white;
+  font-weight: bold;
 }
