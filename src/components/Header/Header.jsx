@@ -1,14 +1,15 @@
 
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import { BiLogoCodepen } from "react-icons/bi";
 
 function Header() {
   const favoriteCount = useSelector((state) => state.favorites.items.length);
-
+  const dispatch=useDispatch();
+  
   return (
-    <header className='mt-2'>
+    <header className=''>
       <nav className='text-white'>
           <ul className='flex  justify-between flex-col sm:flex-row'>
             <li>
@@ -37,6 +38,9 @@ function Header() {
             </li>
             </div>
             <li className='flex gap-2'>
+              <div>
+              <button className=' md:text-lg sm:px-4 text-sm lg:text-xl  px-4 border border-white sm:border-white rounded-xl'>🌙</button>
+              </div>
             <Link to="#" className=''>
               <button className=' md:text-lg sm:px-4 text-sm lg:text-xl  px-4 border border-white sm:border-white rounded-xl '>Login</button>
             </Link>

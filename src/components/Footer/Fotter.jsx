@@ -45,6 +45,7 @@ function Fotter() {
           <Link to="https://www.linkedin.com/in/shubham-varshney-1b49b4294/">
             <CiLinkedin />
           </Link>
+          
           <Link to="https://github.com/shubhamxcode">
             <FaGithub />
           </Link>

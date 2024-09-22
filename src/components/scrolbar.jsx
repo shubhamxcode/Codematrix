@@ -37,20 +37,21 @@ function scrolbar() {
       };
   return (
   <div className="text-white relative space-y-12 ">
-    <div className='pt-8 whitespace-nowrap'>
-    <h1 className="text-white text-center hover:underline  text-[18px] md:text-4xl">
+    <div className='pt-8 flex  flex-col flex-wrap'>
+    <h1 className="text-white text-center hover:underline text-[20px] md:text-4xl">
         Some Great Coding Channel Suggestions
       </h1>
+        {/* <h1 className='m-auto text-5xl text-green-500 transition-all duration-700 '> &#8595;</h1> */}
     </div>
     <div className="absolute top-1/2  sm:left-[10%] transform -translate-y-1/2 hover:border hover:bg-gray-400 ">
       <button onClick={() => handleScroll("left")} className="sm:text-8xl text-6xl">
         {"<"}
       </button>
     </div>
-    <div ref={scrollRef}  className="flex gap-6 overflow-hidden sm:w-[80%] w-[100%] m-auto">
+    <div ref={scrollRef}  className="flex gap-6  w-[80%] overflow-hidden  m-auto">
        {images.map((image)=>(
         <Link to={image.to} key={image.id} className='flex-shrink-0 '>
-          <img src={image.image} alt="notfound" className=' rounded-lg w-72 h-44 hover:cursor-pointer transition-all  duration-300 hover:scale-125 '/>
+          <img src={image.image} alt="notfound" className=' rounded-lg w-44  h-32 sm:w-72 sm:h-44 hover:cursor-pointer transition-all  duration-300 hover:scale-125 '/>
           <div className='flex justify-center mt-2' >
           <button className='bg-blue-500 text-white font-bold px-12 rounded hover:bg-blue-700 transition duration-300 '>{image.text}</button>
           </div>
