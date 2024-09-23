@@ -44,7 +44,7 @@ function scrolbar() {
         {/* <h1 className='m-auto text-5xl text-green-500 transition-all duration-700 '> &#8595;</h1> */}
     </div>
     <div className="absolute top-1/2  sm:left-[10%] transform -translate-y-1/2 hover:border hover:bg-gray-400 ">
-      <button onClick={() => handleScroll("left")} className="sm:text-8xl text-6xl">
+      <button onClick={() => handleScroll("left")} className=" text-white sm:text-8xl text-6xl">
         {"<"}
       </button>
     </div>
@@ -59,7 +59,7 @@ function scrolbar() {
        ))}
     </div>
     <div className="absolute top-1/2 right-0 sm:right-[10%] transform -translate-y-1/2 hover:border hover:bg-gray-400">
-      <button onClick={() => handleScroll("right")} className="sm:text-8xl text-6xl">
+      <button onClick={() => handleScroll("right")} className=" text-white sm:text-8xl text-6xl">
         {">"}
       </button>
     </div>

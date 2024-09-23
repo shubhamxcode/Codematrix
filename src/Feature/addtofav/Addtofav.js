@@ -6,9 +6,9 @@ import { createSlice } from "@reduxjs/toolkit";
  const intialfav=JSON.parse(localStorage.getItem("favorites"))
 
 const savtheame=(theme)=>{
-  localStorage.setItem("thememode",JSON.stringify(theme))
+  localStorage.setItem("Theme",JSON.stringify(theme))
 }
-const intialtheme=JSON.parse(localStorage.getItem("thememode"))
+const intialtheme=JSON.parse(localStorage.getItem("Theme"))
 
 const favoritesslice=createSlice({
   name:'favorites',
@@ -27,10 +27,10 @@ const favoritesslice=createSlice({
       state.items=state.items.filter((item)=>item.id!==action.payload)
       savfav(state.items)
     },
-    toggletheme:(state)=>{
-      state.theme=state.theme==='dark'?'light':'dark';
-      savtheame(state.theme)
-    },
+   toggletheme:(state)=>{
+    state.theme=state.theme==='dark'?'light':'dark'
+    savtheame(state.theme)
+   }
    
   } 
 })

@@ -5,12 +5,12 @@ import Scrolbar from "../scrolbar";
 function Home() {
   return (
     <div className="flex flex-col justify-center mt-4 px-4 overflow-hidden">
-      <header className="text-gray-500 text-center mb-6">
+      <header className="text-gray-400 text-center mb-6">
         <h1 className="text-4xl lg:text-7xl font-bold">The Future Skill</h1>
         <p className="text-xl lg:text-3xl font-bold">It's Code Matrix</p>
       </header>
       <section className="flex flex-col items-center">
-        <p className="text-gray-600 text-justify text-[12px] lg:text-[25px] sm:text-[18px] mb-4">
+        <p className="text-gray-500 text-justify text-[12px] lg:text-[25px] sm:text-[18px] mb-4">
           Our website is dedicated to providing comprehensive information
           about various coding-related fields, catering to both beginners
           and experienced developers. The platform serves as a one-stop

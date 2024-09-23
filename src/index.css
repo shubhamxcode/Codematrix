@@ -18,10 +18,10 @@ html, body, #root {
 body.light-mode{
   background-color: white;
   color: black;
-  font-weight: bold;
+  font-weight:bold;
 }
 body.dark-mode{
-  background-color: black;
+  background-color:black;
   color: white;
   font-weight: bold;
 }

@@ -10,7 +10,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 function App() {
-  const theme = useSelector((state) => state.Theme.theme || 'dark');
+  const theme = useSelector((state) => state.Theme.theme);
   useEffect(() => {
     document.body.className= theme === 'dark' ? 'dark-mode' : 'light-mode';
   }, [theme])
