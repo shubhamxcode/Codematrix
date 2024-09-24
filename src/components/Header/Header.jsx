@@ -3,12 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import { BiLogoCodepen } from "react-icons/bi";
 import { toggletheme } from '../../Feature/addtofav/Addtofav';
-
 function Header() {
   const favoriteCount = useSelector((state) => state.favorites.items.length);
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.Theme.theme);
-
   return (
     <header className={`pt-4  ${theme === 'dark' ? 'bg-black' : 'bg-slate-400'}`}>
       <nav>
