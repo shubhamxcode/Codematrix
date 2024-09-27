@@ -14,7 +14,7 @@ const favoritesslice=createSlice({
   name:'favorites',
   initialState:{
     items:intialfav||[],
-    theme:intialtheme,
+    theme:intialtheme ||'dark',
   },
   reducers:{
     addtofav:(state,action)=>{
@@ -31,11 +31,7 @@ const favoritesslice=createSlice({
     state.theme=state.theme==='dark'?'light':'dark'
     savtheame(state.theme)
    }
-   
   } 
 })
-
-
-
 export const{addtofav,removetofav,toggletheme,settheme}=favoritesslice.actions;
 export default favoritesslice.reducer
