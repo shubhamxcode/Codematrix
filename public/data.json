@@ -1,0 +1,107 @@
+{
+    "html": {
+      "id": "html_001",
+      "overview": {
+        "id": "overview_001",
+        "title":"HTML: HyperText Markup Language",
+        "p1":"HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).",
+        "p2":"HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).",
+        "p3":"HTML uses markup to annotate text, images, and other content for display in a Web browser. HTML markup includes special elements such as <head>, <title>, <body>, <header>, <footer>, <article>, <section>, <p>, <div>, <span>, <img>, <aside>, <audio>, <canvas>, <datalist>, <details>, <embed>, <nav>, <search>, <output>, <progress>, <video>, <ul>, <ol>, <li> and many others."
+      },
+      "basics": {
+        "id": "basics_001",
+        "tags": {
+          "id": "tags_001",
+          "description": "HTML tags are the building blocks of HTML documents. They define the structure and content of web pages.",
+          "examples": {
+            "id": "tags_examples_001",
+            "paragraph": {
+              "id": "paragraph_001",
+              "code": "<p>This is a paragraph.</p>"
+            },
+            "heading": {
+              "id": "heading_001",
+              "code": "<h1>This is a heading.</h1>"
+            },
+            "link": {
+              "id": "link_001",
+              "code": "<a href='https://example.com'>This is a link.</a>"
+            }
+          }
+        },
+        "attributes": {
+          "id": "attributes_001",
+          "description": "Attributes provide additional information about HTML elements.",
+          "examples": {
+            "id": "attributes_examples_001",
+            "href": {
+              "id": "href_001",
+              "code": "<a href='https://example.com'>This is a link.</a>"
+            },
+            "src": {
+              "id": "src_001",
+              "code": "<img src='image.jpg' alt='An image'>"
+            },
+            "class": {
+              "id": "class_001",
+              "code": "<div class='container'>This is a div.</div>"
+            }
+          }
+        }
+      },
+      "forms": {
+        "id": "forms_001",
+        "descriptions": "HTML forms are used to collect user input.",
+        "elements": {
+          "id": "form_elements_001",
+          "input": {
+            "id": "input_001",
+            "code": "<input type='text' placeholder='Enter text'>"
+          },
+          "button": {
+            "id": "button_001",
+            "code": "<button>Submit</button>"
+          },
+          "textarea": {
+            "id": "textarea_001",
+            "code": "<textarea rows='4' cols='50'>Enter text here...</textarea>"
+          }
+        }
+      },
+      "lists": {
+        "id": "lists_001",
+        "description": "HTML supports ordered and unordered lists.",
+        "types": {
+          "id": "list_types_001",
+          "ordered": {
+            "id": "ordered_001",
+            "code": "<ol><li>Item 1</li><li>Item 2</li></ol>"
+          },
+          "unordered": {
+            "id": "unordered_001",
+            "code": "<ul><li>Item 1</li><li>Item 2</li></ul>"
+          }
+        }
+      },
+      "media": {
+        "id": "media_001",
+        "description": "HTML allows embedding of various media types like images, videos, and audio.",
+        "elements": {
+          "id": "media_elements_001",
+          "image": {
+            "id": "image_001",
+            "code": "<img src='image.jpg' alt='Image description'>"
+          },
+          "video": {
+            "id": "video_001",
+            "code": "<video controls><source src='video.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+          },
+          "audio": {
+            "id": "audio_001",
+            "code": "<audio controls><source src='audio.mp3' type='audio/mpeg'>Your browser does not support the audio element.</audio>"
+          }
+        }
+      }
+    }
+  }
+  

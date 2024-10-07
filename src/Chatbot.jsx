@@ -19,7 +19,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
     } catch (error) {
       setanswer("An error occurred. Please try again.");
     }
-    
+    console.log(answer)
 }
 return (
   <div className="flex flex-col items-center p-6">

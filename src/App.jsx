@@ -9,6 +9,7 @@ import Chatai from "./Chatbot.jsx";
 import Addecards from "./Addecards.jsx";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import Record from '../src/Record.jsx'
 
 
 function App() {
@@ -21,9 +22,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-        
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="record" element={<Record />} />
           <Route path='frontend'  element={<Frontend />} />
           <Route path="backend" element={<Backend />} />
           <Route path="chatai" element={<Chatai/>}/>

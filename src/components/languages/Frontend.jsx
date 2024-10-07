@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 function Frontend() {
   const cards = [
-    { id: 1, title: "HTML", description: "The complete guide for  HTML", to:"/Htmldisplay" },
+    { id: 1, title: "HTML", description: "The complete guide for  HTML", to:"/record" },
     { id: 2, title: "CSS", description: "The complete guide for CSS ", },
     { id: 3, title: "TAILWIND", description: "The complete guide for TAILWIND", },
     { id: 4, title: "JAVA SCRIPT", description: "The complete guide for JAVASCRIPT ", },
