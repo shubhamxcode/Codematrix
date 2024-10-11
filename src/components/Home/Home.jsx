@@ -1,9 +1,22 @@
 import intro from "../../images/illustration-intro.png";
 import Card from "../../Resuable/Carousel";
 import Scrolbar from "../scrolbar";
-
+import { motion } from "framer-motion";
 function Home() {
   return (
+    <motion.div 
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{
+      duration: 0.3,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 3,
+        stiffness:100,
+        restDelta: 0.001
+      }
+    }}>
     <div className="flex flex-col justify-center mt-4 px-4 overflow-hidden">
       <header className="text-gray-400 text-center mb-6">
         <h1 className="text-4xl lg:text-7xl font-bold">The Future Skill</h1>
@@ -52,6 +65,7 @@ function Home() {
         <Scrolbar />
       </div>
     </div>
+    </motion.div>
   );
 }
 
