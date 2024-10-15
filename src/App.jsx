@@ -11,7 +11,6 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Record from '../src/Record.jsx'
 
-
 function App() {
   const theme = useSelector((state) => state.Theme.theme);
   useEffect(() => {

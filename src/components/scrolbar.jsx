@@ -38,7 +38,7 @@ function scrolbar() {
   return (
   <div className="relative space-y-12 ">
     <div className='pt-8 flex  flex-col flex-wrap'>
-    <h1 className="text-center hover:underline text-[20px] md:text-4xl">
+    <h1 className="text-center hover:underline text-[20px] md:text-5xl">
         Some Great Coding Channel Suggestions
       </h1>
         {/* <h1 className='m-auto text-5xl text-green-500 transition-all duration-700 '> &#8595;</h1> */}

@@ -6,8 +6,7 @@ function Frontend() {
     { id: 2, title: "CSS", description: "The complete guide for CSS ", },
     { id: 3, title: "TAILWIND", description: "The complete guide for TAILWIND", },
     { id: 4, title: "JAVA SCRIPT", description: "The complete guide for JAVASCRIPT ", },
-    { id: 5, title: "REACT", description: "The complete guide for REACT ",},
-    { id: 6, title: "ChatBot", description: "Clear your all douts using our chatbot",to:"/chatai"},
+    { id: 5, title: "REACT", description: "The complete guide for REACT",},
   ];
   return (
     <div className="flex flex-wrap justify-center">

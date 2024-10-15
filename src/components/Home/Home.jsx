@@ -2,10 +2,11 @@ import intro from "../../images/illustration-intro.png";
 import Card from "../../Resuable/Carousel";
 import Scrolbar from "../scrolbar";
 import { motion } from "framer-motion";
+import Ai from '../AI/ai'
 function Home() {
   return (
     <motion.div 
-    initial={{ opacity: 0, scale: 0.5 }}
+    initial={{ opacity: 0, scale: 0.9 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{
       duration: 0.3,
@@ -17,7 +18,7 @@ function Home() {
         restDelta: 0.001
       }
     }}>
-    <div className="flex flex-col justify-center mt-4 px-4 overflow-hidden">
+    <div className="flex flex-col justify-center space-y-10">
       <header className="text-gray-400 text-center mb-6">
         <h1 className="text-4xl lg:text-7xl font-bold">The Future Skill</h1>
         <p className="text-xl lg:text-3xl font-bold">It's Code Matrix</p>
@@ -52,7 +53,7 @@ function Home() {
       </div>
 
       <div className="flex items-center justify-center font-bold pt-6">
-        <h1 className="text-white text-center hover:underline text-2xl md:text-5xl">
+        <h1 className="text-white text-center hover:underline text-2xl md:text-6xl">
           Tech Resources for Developers
         </h1>
       </div>
@@ -60,7 +61,9 @@ function Home() {
       <div id="Cardparent" className="flex flex-wrap justify-center mt-6">
         <Card />
       </div>
-
+      <div>
+        <Ai/>
+      </div>
       <div>
         <Scrolbar />
       </div>
