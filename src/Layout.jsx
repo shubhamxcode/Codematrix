@@ -5,7 +5,7 @@ import { Outlet } from "react-router";
 function Layout() {
   return (
     <div className="">
-      <div className=" sticky z-50 top-0 bg-slate-">
+      <div className=" sticky z-50 top-0 bg-slate-600">
         <Header />
       </div>
       <Outlet />
