@@ -14,7 +14,7 @@ const favoritesslice=createSlice({
   name:'favorites',
   initialState:{
     items:intialfav||[],
-    theme:intialtheme ||'dark',
+    theme:intialtheme
   },
   reducers:{
     addtofav:(state,action)=>{
