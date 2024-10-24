@@ -13,7 +13,7 @@ function AI() {
         </h1>
       </div>
       <Link to="chatai" className=' flex flex-col lg:flex-row items-center justify-around gap-12'>
-        <div className='border border-gray-600 rounded-lg text-center py-20 px-16 hover:bg-green-700 transition duration-300'>
+        <div className='border border-gray-600 rounded-lg text-center py-20 px-16 hover:bg-green-800 transition duration-300'>
           <h1 className='text-green-500 text-4xl font-semibold mb-4'>Chatbot</h1>
           <p className='text-gray-400 text-2xl'>Unlock Better Learning</p>
         </div>
