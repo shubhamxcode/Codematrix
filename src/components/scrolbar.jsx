@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight, FaPlay } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
 import Img1 from '../images/code with harry.jpg';
 import Img2 from '../images/HackerSploit.webp';
 import Img3 from '../images/Hitesh choudhry.jpg';
@@ -26,6 +27,7 @@ const images = [
 ];
 
 function Scrollbar() {
+  const theme = useSelector((state) => state.Theme.theme);
   const scrollRef = useRef();
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -46,8 +48,17 @@ function Scrollbar() {
     }
   };
 
+  // Determine styles based on theme
+  const bgColor = theme === 'light' ? 'bg-white' : 'bg-gradient-to-b from-black via-gray-900 to-black';
+  const textColor = theme === 'light' ? 'text-black' : 'text-white';
+  const cardBgColor = theme === 'light' ? 'bg-white' : 'bg-gray-800/50';
+  const cardBorderColor = theme === 'light' ? 'border-gray-300' : 'border-gray-700/50';
+  const cardHoverBorderColor = theme === 'light' ? 'group-hover:border-blue-500' : 'group-hover:border-blue-500/50';
+  const cardHoverShadowColor = theme === 'light' ? 'group-hover:shadow-blue-500/20' : 'group-hover:shadow-blue-500/10';
+  const progressBarBg = theme === 'light' ? 'bg-gray-300' : 'bg-gray-700';
+
   return (
-    <div className="relative py-20 bg-gradient-to-r from-gray-900 via-black to-gray-900 ">
+    <div className={`relative py-20 ${bgColor}`}>
       {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl"></div>
@@ -58,12 +69,14 @@ function Scrollbar() {
       <div className="relative max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1 className={`text-4xl md:text-6xl font-bold ${textColor}`}>
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Premium Learning Resources
             </span>
           </h1>
-          <p className="mt-4 text-gray-400 text-lg">Discover the best programming tutorials and courses</p>
+          <p className={`mt-4 ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'} text-lg`}>
+            Discover the best programming tutorials and courses
+          </p>
         </div>
 
         {/* Carousel Container */}
@@ -73,7 +86,7 @@ function Scrollbar() {
             onClick={() => handleScroll("left")}
             className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 group"
           >
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-800/80 backdrop-blur-sm border border-gray-700 text-white transition-all duration-300 group-hover:bg-blue-500">
+            <div className={`w-12 h-12 flex items-center justify-center rounded-full ${theme === 'light' ? 'bg-gray-200' : 'bg-gray-800/80'} backdrop-blur-sm border ${theme === 'light' ? 'border-gray-300' : 'border-gray-700'} text-white transition-all duration-300 group-hover:bg-blue-500`}>
               <FaChevronLeft className="w-5 h-5" />
             </div>
           </button>
@@ -93,7 +106,7 @@ function Scrollbar() {
                   rel="noopener noreferrer"
                   className="group flex-none"
                 >
-                  <div className="w-80 bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 transition-all duration-300 group-hover:border-blue-500/50 group-hover:shadow-lg group-hover:shadow-blue-500/10">
+                  <div className={`w-80 ${cardBgColor} backdrop-blur-sm rounded-2xl overflow-hidden border ${cardBorderColor} transition-all duration-300 ${cardHoverBorderColor} ${cardHoverShadowColor}`}>
                     {/* Image Container */}
                     <div className="relative h-48 overflow-hidden">
                       <img
@@ -113,8 +126,8 @@ function Scrollbar() {
 
                     {/* Content */}
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-white mb-2">{item.text}</h3>
-                      <p className="text-gray-400 mb-4">{item.desc}</p>
+                      <h3 className={`text-xl font-bold ${textColor} mb-2`}>{item.text}</h3>
+                      <p className={`${theme === 'light' ? 'text-gray-600' : 'text-gray-400'} mb-4`}>{item.desc}</p>
                       <div className="transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                         <span className="inline-flex items-center text-blue-400 font-semibold">
                           Watch Now
@@ -132,7 +145,7 @@ function Scrollbar() {
             onClick={() => handleScroll("right")}
             className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 group"
           >
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-800/80 backdrop-blur-sm border border-gray-700 text-white transition-all duration-300 group-hover:bg-blue-500">
+            <div className={`w-12 h-12 flex items-center justify-center rounded-full ${theme === 'light' ? 'bg-gray-200' : 'bg-gray-800/80'} backdrop-blur-sm border ${theme === 'light' ? 'border-gray-300' : 'border-gray-700'} text-white transition-all duration-300 group-hover:bg-blue-500`}>
               <FaChevronRight className="w-5 h-5" />
             </div>
           </button>
@@ -140,7 +153,7 @@ function Scrollbar() {
 
         {/* Scroll Progress */}
         <div className="mt-8 flex justify-center">
-          <div className="w-64 h-1 rounded-full bg-gray-700 overflow-hidden">
+          <div className={`w-64 h-1 rounded-full ${progressBarBg} overflow-hidden`}>
             <div 
               className="h-full bg-blue-500 transition-all duration-300 rounded-full"
               style={{ 

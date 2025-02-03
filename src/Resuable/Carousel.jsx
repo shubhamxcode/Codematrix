@@ -1,20 +1,11 @@
 import React from 'react';
-import {
-  FaLaptopCode,
-  FaCode,
-  FaHackerrank,
-  FaAppStoreIos,
-  FaDatabase,
-  FaLinux,
-  FaCloud,
-  FaDev,
-} from "react-icons/fa";
+import { useSelector, useDispatch } from 'react-redux';
+import { FaLaptopCode, FaCode, FaHackerrank, FaAppStoreIos, FaDatabase, FaLinux, FaCloud, FaDev } from "react-icons/fa";
 import { VscGame } from "react-icons/vsc";
 import { BsRobot } from "react-icons/bs";
 import { PiSecurityCameraFill } from "react-icons/pi";
 import { TbStackFront } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
 import { addtofav, removetofav } from "../Feature/addtofav/Addtofav";
 
 const cards = [
@@ -95,20 +86,32 @@ const cards = [
  ];
 
 const Carousel = () => {
+  const theme = useSelector((state) => state.Theme.theme);
   const dispatch = useDispatch();
   const favitem = useSelector((state) => state.favorites.items);
   const isfav = (id) => favitem.some((item) => item.id === id);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 p-8">
+    <div className={`${theme === "light" 
+      ? "bg-white text-slate-800" 
+      : "bg-gradient-to-br from-gray-900 via-black to-gray-800 text-gray-100"} 
+      min-h-screen p-8`}>
       <div className="max-w-7xl mx-auto space-y-8">
         <div className="text-center space-y-4">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+          <h1 className={`${theme === "light" 
+            ? "text-slate-900 hover:text-blue-700" 
+            : "text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-green-400 hover:to-blue-600"} 
+            text-5xl font-bold transition-colors duration-300`}>
             Learning Paths
           </h1>
-          <p className="text-gray-400 text-lg">Choose your path to mastery</p>
+          <p className={`${theme === "light" 
+            ? "text-slate-600 hover:text-slate-800" 
+            : "text-gray-300 hover:text-gray-100"} 
+            text-lg transition-colors duration-300`}>
+            Choose your path to mastery
+          </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map((card) => (
             <div key={card.id} className="group">
@@ -116,28 +119,41 @@ const Carousel = () => {
                 to={card.to || "we are still working"}
                 className="block h-full"
               >
-                <div className="relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 h-full 
-                             transform transition-all duration-500 
-                             group-hover:scale-[1.02] group-hover:-translate-y-2
-                             border border-gray-700/50 group-hover:border-green-500/50
-                             hover:shadow-[0_0_30px_rgba(34,197,94,0.2)]">
+                <div className={`relative ${theme === "light" 
+                  ? "bg-white border-gray-300 text-slate-800" 
+                  : "bg-gray-800/50 backdrop-blur-sm border-gray-700/50 text-gray-100"} 
+                  rounded-2xl p-8 h-full 
+                  transform transition-all duration-500 
+                  group-hover:scale-[1.02] group-hover:-translate-y-2
+                  border group-hover:border-green-500/50
+                  hover:shadow-[0_0_30px_rgba(34,197,94,0.2)]`}>
                   {/* Glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/5 to-blue-500/0 
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+                  <div className={`absolute inset-0 ${theme === "light" 
+                    ? "bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-green-500/0" 
+                    : "bg-gradient-to-r from-green-500/0 via-green-500/5 to-blue-500/0"} 
+                    opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`} />
                   
                   <div className="relative flex flex-col items-center justify-between h-full gap-6">
-                    <div className="text-green-400 text-6xl transform transition-all duration-500 
-                                group-hover:scale-110 group-hover:text-green-300
-                                group-hover:rotate-3">
+                    <div className={`text-6xl transform transition-all duration-500 
+                      ${theme === "light" 
+                        ? "text-slate-700 group-hover:text-blue-600" 
+                        : "text-cyan-400 group-hover:text-green-300"} 
+                      group-hover:scale-110 group-hover:rotate-3`}>
                       {card.image}
                     </div>
                     
                     <div className="text-center space-y-3">
-                      <h2 className="text-2xl font-bold text-white group-hover:text-green-400 
-                                 transition-colors duration-300">
+                      <h2 className={`text-2xl font-bold 
+                        ${theme === "light" 
+                          ? "text-slate-900 group-hover:text-blue-700" 
+                          : "text-white group-hover:text-green-400"} 
+                        transition-colors duration-300`}>
                         {card.title}
                       </h2>
-                      <p className="text-gray-400 group-hover:text-gray-300">
+                      <p className={`${theme === "light" 
+                        ? "text-slate-600 group-hover:text-slate-800" 
+                        : "text-gray-400 group-hover:text-gray-200"} 
+                        transition-colors duration-300`}>
                         {card.description}
                       </p>
                     </div>

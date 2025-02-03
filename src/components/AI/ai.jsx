@@ -48,16 +48,14 @@ function AI() {
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className={`text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r ${
+          <h1 className={`text-5xl md:text-6xl font-bold mb-6 text-transparent bg-gradient-to-r ${
             theme === 'dark'
               ? 'from-green-400 via-blue-500 to-purple-500'
               : 'from-green-600 via-blue-600 to-purple-600'
-          }`}>
+          } bg-clip-text`}>
             Level Up Your Knowledge
           </h1>
-          <p className={`text-xl md:text-2xl ${
-            theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
-          } max-w-2xl mx-auto`}>
+          <p  className=''>
             Transform your learning journey with our AI-powered chatbot
           </p>
         </div>

@@ -35,7 +35,7 @@ function Chatai() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 p-6">
+    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-50 p-6">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
