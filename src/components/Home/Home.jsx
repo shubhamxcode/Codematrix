@@ -5,6 +5,7 @@ import Card from "../../Resuable/Carousel";
 import Scrolbar from "../scrolbar";
 import Ai from '../AI/ai';
 import { FaCode, FaLaptopCode, FaRocket } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const theme = useSelector((state) => state.Theme.theme);
@@ -44,15 +45,28 @@ function Home() {
             }`}>
               Our website provides comprehensive coding information, catering to beginners and professionals alike. Explore full-stack development, data science, AI, and more.
             </p>
-            <button
-              className={`px-8 py-4 rounded-xl text-lg font-bold transition duration-300 shadow-md ${
-                theme === 'dark'
-                  ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                  : 'bg-blue-500 hover:bg-blue-600 text-white'
-              }`}
-            >
-              <FaRocket className="inline-block mr-2 animate-bounce" /> Learn More
-            </button>
+            <div className="flex gap-4">
+              <button
+                className={`px-8 py-4 rounded-xl text-lg font-bold transition duration-300 shadow-md ${
+                  theme === 'dark'
+                    ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                    : 'bg-blue-500 hover:bg-blue-600 text-white'
+                }`}
+              >
+                <FaRocket className="inline-block mr-2 animate-bounce" /> Learn More
+              </button>
+              <Link to="/chatai">
+                <button
+                  className={`px-8 py-4 rounded-xl text-lg font-bold transition duration-300 shadow-md ${
+                    theme === 'dark'
+                      ? 'bg-green-600 hover:bg-green-700 text-white'
+                      : 'bg-green-500 hover:bg-green-600 text-white'
+                  }`}
+                >
+                  Chat with Our AI
+                </button>
+              </Link>
+            </div>
           </div>
           <div className="lg:w-1/2">
             <img
